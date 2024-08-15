@@ -1,60 +1,51 @@
-#input1{
-  font-size: 40px;
-  color: rgb(134, 1, 1);
-  padding-left: 2px;
-  padding-right: 2px;
-  border-radius: 35px;
-  text-align: start;
-}
-body{
-  margin: 0%;
-}
-h1{
-  text-align: center;
-}
-.navbar ul{
-    list-style-type: none;
-    background-color: rgb(72, 72, 72);
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    border-radius: 8px;
-    height: 50px;
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    transition: .5s;
-}
-.navbar a{
-color: white;
-text-decoration: none;
-padding: 015px;
+nav ul{
 display: inline-block;
-text-align: center;
-height: 50px;
-font-size: 25px;
-z-index: 1;
-transition: .5s;
-position: relative;
-font-weight: 500;
+list-style-type: none;
 }
-.navbar a:hover{
-  background-color: rgb(33, 4, 194);
-  font-size: 20px;
-  align-items: center;
-border-radius: 8px;
+
+nav ul li{
+  float: left;
+  width: 150px;
+  background-color: rgb(220, 95, 0);
+  margin-right: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border:5px solid;
 
 }
-.navbar li{
-float: right;
-transition: .5s;
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
 }
-.navbar span{
-  position:absolute;
-  top: 0;
-  left:0%;
-  width: 20px;
-  height: 100%;
-  transition: .5s;
-  border-radius: 8px;
+
+h1{
+  font-family: 'minecraft', sans-serif;
+  font-size: 110px;
+}
+
+@font-face {
+  font-family: 'minecraft';
+  src: url(fonts/MinecraftEvenings-lgvPd.ttf);
+}
+
+header {
+  background-color: blue;
+  justify-content: end;
+  text-align: right;
+}
+
+header h1 {
+  text-align: left;
+}
+
+@font-face {
+  font-family: 'mem';
+  src: url(fonts/NexionPersonalUseOnly-aYPlo.otf);
+}
+
+span{
+  font-family: 'mem';
+  font-size: 110px;
 }
