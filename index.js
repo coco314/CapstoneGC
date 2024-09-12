@@ -68,6 +68,7 @@ router.hooks({
             // Handle the response
             store.home.quote = response.data.quote;
             console.log("Kanye says: ", response.data.quote);
+            router.navigate("/home");
           })
           .catch((error) => {
             // Handle the error
@@ -100,3 +101,36 @@ router
     },
   })
   .resolve();
+
+function calculateResult() {
+  // Get all form elements
+  const form = document.getElementById("quizForm");
+
+  // Store answers in an object
+  const answers = {
+    Mario: 0,
+    Yoshi: 0,
+    Boo: 0,
+    Bowser: 0,
+    "Donkey Kong": 0,
+  };
+
+  // Get the selected answers
+  const formData = new FormData(form);
+
+  // Loop through each entry and count each answer
+  for (let entry of formData.values()) {
+    if (answers[entry] !== undefined) {
+      answers[entry]++;
+    }
+  }
+
+  // Find the character with the most selections
+  let result = Object.keys(answers).reduce((a, b) =>
+    answers[a] > answers[b] ? a : b
+  );
+
+  // Display the result
+  const resultDiv = document.getElementById("result");
+  resultDiv.innerHTML = `<h2>You align most with: ${result}!</h2>`;
+}
