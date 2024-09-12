@@ -1,7 +1,5 @@
 import html from "html-literal";
 
-export default () => html`
-  <header>
-    <h1>header</h1>
-  </header>
+export default (state) => html`
+  <header><h1>MINDCODE${state.home}</h1></header>
 `;
